@@ -1,0 +1,67 @@
+nav ul {
+  background-color: #ffffff;
+  border: none;
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(241, 232, 232, 0.1);
+}
+
+nav ul li {
+  padding: 0; /* Remove padding extra */
+}
+
+nav a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.link {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Adiciona uma transição suave para a cor de fundo e do texto */
+}
+
+.linkAtivo {
+  font-weight: 600;
+  color: rgb(255, 69, 0); /* Cor para o link ativo */
+}
+
+.link:hover {
+  background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+  color: black; /* Altera a cor do texto ao passar o mouse */
+  cursor: pointer;
+  border-radius: 5px; /* Arredonda as bordas ao passar o mouse */
+  text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+}
+
+
+/* Menu padrão para telas grandes */
+.menu {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  /* Menu oculto para telas pequenas */
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  /* Menu aberto quando o estado é true */
+  .menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px; /* Ajuste a posição conforme necessário */
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

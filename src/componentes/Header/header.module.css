@@ -1,0 +1,97 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #ea0000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona leve sombra */
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.storeName {
+  margin-left: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.hamburgerButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburgerIcon {
+  font-size: 30px;
+  color: #000;
+}
+
+.menuContainer {
+  position: absolute;
+  top: 60px; /* Alinha o menu logo abaixo do header */
+  right: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+}
+
+@media (max-width: 768px) {
+  .hamburgerIcon {
+    font-size: 24px; /* Ajuste do tamanho do ícone no mobile */
+  }
+
+  .menuContainer {
+    width: 100%; /* O menu ocupa toda a largura em dispositivos menores */
+  }
+}
+
+
+
+/* Estilo para telas grandes */
+.header nav ul {
+  display: flex; /* Mostrar o menu horizontalmente */
+}
+
+.hamburgerButton {
+  display: none; /* Esconde o ícone do hambúrguer */
+}
+
+@media (max-width: 768px) {
+  /* Esconde os links e mostra o menu hambúrguer em telas menores */
+  .header nav ul {
+    display: none; /* Esconde os links no menu */
+  }
+
+  .hamburgerButton {
+    display: block; /* Exibe o ícone do hambúrguer */
+  }
+
+  nav ul.open {
+    display: flex; /* Exibe o menu quando aberto */
+    flex-direction: column;
+    position: absolute;
+    top: 50px; /* Posiciona abaixo do header */
+    right: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
