@@ -49,8 +49,7 @@ function Sobre() {
               <p className={style.paragrafo}>
                 A aplicação foi publicada na plataforma Vercel, permitindo acessibilidade online para testes e demonstração das funcionalidades. O link para acesso ao projeto está disponível abaixo:
               </p>
-              <a href="https://api.mercadolibre.com/sites/MLB/search?q=livro">
-                https://api.mercadolibre.com/sites/MLB/search?q=livro
+              <a href=
               </a>
             </div>
 
