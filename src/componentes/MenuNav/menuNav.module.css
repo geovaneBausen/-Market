@@ -11,7 +11,7 @@ nav ul {
 }
 
 nav ul li {
-  padding: 0; /* Remove padding extra */
+  padding: 0; 
 }
 
 nav a {
@@ -22,9 +22,10 @@ nav a {
   font-size: 16px;
   color: #000000;
   font-weight: 500;
-  padding: 5px 10px;
+  padding: 10px 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
   /* Adiciona uma transição suave para a cor de fundo e do texto */
+  
 }
 
 .linkAtivo {
@@ -63,5 +64,10 @@ nav a {
     width: 100%;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul li {
+    padding: 0;
+    margin-bottom: 15px; /* Adiciona margem inferior aos itens do menu */
   }
 }

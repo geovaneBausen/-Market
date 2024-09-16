@@ -24,7 +24,10 @@ const Header = () => {
         <Icon icon="mdi:menu" fontSize={30} />
       </button>
 
-      {/* Menu de navegação */}
+      {/* Menu de navegação
+      A classe CSS aplicada ao elemento muda dependendo do estado da variável isOpen. O componente filho MenuNav recebe informações sobre o estado do menu e pode interagir com ele através das propriedades isOpen e setIsOpen.
+      */}
+
       <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
         <MenuNav isOpen={isOpen} setIsOpen={setIsOpen} />
       </nav>

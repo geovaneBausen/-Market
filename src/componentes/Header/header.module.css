@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px 20px;
   background-color: #ffffff;
@@ -17,6 +17,7 @@
 .leftSection {
   display: flex;
   align-items: center;
+  flex-grow: 1; /* Permite que a leftSection ocupe espaço disponível */
 }
 
 .logo {
@@ -34,6 +35,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  flex-grow: 1;
 }
 
 .hamburgerIcon {
@@ -87,7 +89,7 @@
     flex-direction: column;
     position: absolute;
     top: 50px; /* Posiciona abaixo do header */
-    right: 0;
+    right: 40px;
     width: 100%;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
