@@ -60,7 +60,7 @@ Isso garante que a interface se atualize conforme necessário e mantenha uma exp
 
 A aplicação foi publicada na plataforma Vercel, permitindo acessibilidade online para testes e demonstração das funcionalidades. O link para acesso ao projeto está disponível abaixo:
 
-[Link para o projeto](https://seu-link-para-o-projeto.vercel.app)
+[Link para o projeto](https://https://market-rho-one.vercel.app/)
 
 
 
