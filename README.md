@@ -36,9 +36,11 @@ O projeto foi estruturado utilizando componentes reutilizáveis, facilitando a m
 
 A aplicação foi estilizada com CSS Modules, priorizando a responsividade e uma experiência visual moderna. A modularização do CSS garante o escopo local dos estilos, evitando conflitos de nomenclatura e promovendo um desenvolvimento mais organizado. Boas práticas de design foram aplicadas para garantir uma interface intuitiva e funcional em diferentes tamanhos de tela, desde desktops até dispositivos móveis.
 *Ipad Mini*
+
 ![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/ipadMini.png)
+
 *Iphone pro max 14*
-![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/iphone14Promax.png)
+![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/iphone14ProMax.png)
 ## Hooks e Efeitos
 
 O hook **`useState`** é amplamente utilizado para gerenciar o estado local em vários componentes, incluindo:
