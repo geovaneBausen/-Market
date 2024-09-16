@@ -36,8 +36,6 @@ O projeto foi estruturado utilizando componentes reutilizáveis, facilitando a m
 
 A aplicação foi estilizada com CSS Modules, priorizando a responsividade e uma experiência visual moderna. A modularização do CSS garante o escopo local dos estilos, evitando conflitos de nomenclatura e promovendo um desenvolvimento mais organizado. Boas práticas de design foram aplicadas para garantir uma interface intuitiva e funcional em diferentes tamanhos de tela, desde desktops até dispositivos móveis.
 
-
-![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/ipadMini.png)*Ipad Mini*
 ![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/iphone14ProMax.png)*Iphone pro max 14*
 
 
