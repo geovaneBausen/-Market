@@ -73,9 +73,10 @@ function Sobre() {
             </p>
             <div className={style.imagemContainer}>
               <img src="./imagens/iphone14ProMax.png" alt="Iphone 14 ProMax" className={style.imagem} />
-              <p className={style.imagemDescricao}>Ipad Mini</p>
+              <p className={style.imagemDescricao}>Iphone 14 ProMax</p>  
               <img src="./imagens/ipadMini.png" alt="Ipad Mini" className={style.imagem} />
-              <p className={style.imagemDescricao}>Iphone 14 ProMax</p>
+              <p className={style.imagemDescricao}>Ipad Mini</p>
+              
             </div>
           </div>
 
@@ -106,19 +107,10 @@ function Sobre() {
             <p className={style.paragrafo}>
               A aplicação foi publicada na plataforma Vercel, permitindo acessibilidade online para testes e demonstração das funcionalidades. O link para acesso ao projeto está disponível abaixo:
             </p>
-            <a href="" className={style.link}>Link para o projeto</a>
+            <a href="https://market-rho-one.vercel.app/" className={style.link}>KatanaMarket</a>
           </div>
 
-          {/* Seção "Documentação" */}
-          <div className={style.secao}>
-            <h3 className={style.tituloSecao}>Documentação</h3>
-            <p className={style.paragrafo}>
-              O projeto está no GitHub, com instruções para instalação e execução da aplicação.
-            </p>
-            <div className={style.linkContainer}>
-              <Link to="https://github.com/geovaneBausen" target="_blank" rel="noopener noreferrer">
-                <Icon icon="fe:github" className={style.githubIcon} />
-              </Link>
+      
             </div>
           </div>
         </div>
