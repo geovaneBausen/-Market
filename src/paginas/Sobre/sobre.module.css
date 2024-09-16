@@ -98,3 +98,23 @@
     font-size: 14px;
   }
 }
+.listaSemBolinha {
+  list-style-type: none; /* Remove as bolinhas das listas */
+  padding-left: 0; /* Remove o espaçamento padrão da lista */
+}
+
+.listaSemBolinha li {
+  margin-bottom: 0.5rem; /* Ajuste o espaçamento entre os itens conforme necessário */
+}
+.githubIcon {
+  display: block;
+  margin: 0 auto; /* Para centralizar horizontalmente se o ícone estiver dentro de um elemento de bloco */
+  font-size: 50px;
+  color: #000000;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
