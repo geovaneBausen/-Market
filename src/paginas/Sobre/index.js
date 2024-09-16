@@ -73,10 +73,9 @@ function Sobre() {
             </p>
             <div className={style.imagemContainer}>
               <img src="./imagens/iphone14ProMax.png" alt="Iphone 14 ProMax" className={style.imagem} />
-              <p className={style.imagemDescricao}>Iphone 14 ProMax</p>  
-              <img src="./imagens/ipadMini.png" alt="Ipad Mini" className={style.imagem} />
               <p className={style.imagemDescricao}>Ipad Mini</p>
-              
+              <img src="./imagens/ipadMini.png" alt="Ipad Mini" className={style.imagem} />
+              <p className={style.imagemDescricao}>Iphone 14 ProMax</p>
             </div>
           </div>
 
@@ -110,7 +109,16 @@ function Sobre() {
             <a href="https://market-rho-one.vercel.app/" className={style.link}>KatanaMarket</a>
           </div>
 
-      
+          {/* Seção "Documentação" */}
+          <div className={style.secao}>
+            <h3 className={style.tituloSecao}>Documentação</h3>
+            <p className={style.paragrafo}>
+              O projeto está no GitHub, com instruções para instalação e execução da aplicação.
+            </p>
+            <div className={style.linkContainer}>
+              <Link to="https://github.com/geovaneBausen" target="_blank" rel="noopener noreferrer">
+                <Icon icon="fe:github" className={style.githubIcon} />
+              </Link>
             </div>
           </div>
         </div>
