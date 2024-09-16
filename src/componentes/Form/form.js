@@ -117,7 +117,7 @@ function Form() {
 
                     <select name='maritalStatus' value={data.maritalStatus} onChange={handleChange}>
 
-                        <option value=''>-- selecione... </option>
+                        <option value=''>-- selecione </option>
                         <option value='solteiro'>Solteiro</option>
                         <option value='casado'>Casado</option>
                         <option value='divorciado'>Divorciado</option>
@@ -146,10 +146,12 @@ function Form() {
                 </div>
                 {/* Botão de enviar o formulário, desabilitado até que o progresso seja 100% */}
                 <button onClick={handleClick} disabled={Calculateprogress() !== 100}>Enviar</button>
+                
             </form>
+
         </div>
     );
 
-}
+}           
 
 export default Form;

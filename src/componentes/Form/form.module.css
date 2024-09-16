@@ -1,5 +1,3 @@
-/* form.module.css */
-
 .formGroup {
     margin-bottom: 20px;
     display: flex;
@@ -10,73 +8,74 @@
     margin-bottom: 5px;
     font-size: 16px;
     color: #333;
+    font-weight: bold;  /* Deixa o texto do label mais destacado */
 }
 
 .formGroup input,
 .formGroup select {
-    padding: 10px;
-    font-size: 14px;
+    padding: 12px;  /* Aumenta o padding para tornar os campos mais confortáveis */
+    font-size: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;  /* Bordas mais arredondadas para um visual moderno */
     outline: none;
     transition: border-color 0.3s ease;
 }
 
 .formGroup input:focus,
 .formGroup select:focus {
-    border-color: #007aff; 
+    border-color: #007aff;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);  /* Adiciona sombra ao focar */
 }
 
-.radios-container {
+.radiosContainer {
     display: flex;
-    gap: 20px;
+    gap: 20px;  /* Espaçamento maior entre os botões de rádio */
     margin-top: 10px;
 }
 
-.radios-container span {
+.radiosContainer span {
     display: flex;
     align-items: center;
     font-size: 14px;
     color: #333;
-
 }
 
-.radios-container input {
-    margin-right:40px; /* Espaçamento entre os radios */
-    accent-color: #007aff; 
+.radiosContainer input {
+    margin-right: 10px;  /* Ajuste do espaçamento entre radio e label */
+    accent-color: #007aff;  /* Cor moderna para o botão de rádio */
 }
 
 /* Estilo do Card */
 .formCard {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;  /* Bordas mais arredondadas */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  /* Sombra mais destacada */
+    padding: 40px;  /* Mais espaçamento interno para conforto */
     max-width: 500px;
-    margin: 0 auto;
+    margin: 20px auto;
     font-family: 'Arial', sans-serif;
 }
 
 .formCard h2 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 600;  /* Deixa o título mais forte */
+    font-size: 26px;
 }
 
 .formCard button {
     background-color: #007aff;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: block;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .formCard button:hover {
@@ -88,12 +87,15 @@
     cursor: not-allowed;
 }
 
+/* Barra de progresso */
 .progressBar {
-    height: 10px;
-    background-color: #090303;
-    border-radius: 5px;
-  }
-  
-  .progressBarFilled {
+    height: 12px;  /* Aumenta a altura da barra de progresso */
+    background-color: #eee;
+    border-radius: 6px;
+    margin-bottom: 20px;  /* Adiciona espaço abaixo da barra */
+}
+
+.progressBarFilled {
     background-color: #4CAF50;
-  }
+    border-radius: 6px;
+}

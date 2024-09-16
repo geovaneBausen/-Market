@@ -2,7 +2,7 @@ import MenuNav from '../MenuNav/menuNav';
 import styles from './main.module.css';
 
 const Main = (props) => {
-  // console.log(props) 
+   //console.log(props) 
 
   return (
     <main className={styles.principal}> 

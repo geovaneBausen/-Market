@@ -1,6 +1,6 @@
 import styles from './footer.module.css';
 import { Icon } from "@iconify/react";
-import { Link } from 'react-router-dom'; // Importe o Link do React Router
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -9,12 +9,12 @@ const Footer = () => {
         <Link to="https://github.com/geovaneBausen" target="_blank" rel="noopener noreferrer">
           <Icon icon="mingcute:linkedin-fill" className={styles.githubIcon} />
         </Link>
-        <Link to="https://github.com/geovaneBausen" target="_blank" rel="noopener noreferrer"> 
-          <Icon icon="fe:github" className={styles.githubIcon} /> 
+        <Link to="https://github.com/geovaneBausen" target="_blank" rel="noopener noreferrer">
+          <Icon icon="fe:github" className={styles.githubIcon} />
         </Link>
       </div>
 
-      <p className={styles.copyright}>© {new Date().getFullYear()}  Site desenvolvido pelo estudante de TSI Geovane B. Bausen.</p>
+      <p className={styles.copyright}>© {new Date().getFullYear()} Site desenvolvido pelo estudante de TSI Geovane B. Bausen.</p>
 
     </footer>
   );

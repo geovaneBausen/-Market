@@ -1,4 +1,4 @@
-//componente filho
+//componente filho - Exibir um único item da lista de produtos.
 
 import { Link } from "react-router-dom"; // Importa o componente Link para criar links navegáveis
 import styles from "./itemCard.module.css";
@@ -8,7 +8,7 @@ function ItemCard(props) {
   // Extrai as propriedades do item recebidas via props
   const { id, title, thumbnail, price, available_quantity } = props.dados;
 
-  console.log("Meus dados vindos do listagem de itens elemento pai apos o filtro da query aceita pela api:", props.dados);
+  console.log("Meus dados vindos do listagem de itens, elemento pai", props.dados);
 
   return (
     <li className={styles.itemCard}> {/* Item da lista com estilo */}

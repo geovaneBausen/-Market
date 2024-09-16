@@ -6,7 +6,24 @@
   background-color: #000000;
   font-family: 'Apple SD Gothic Neo', sans-serif; /* Adiciona a fonte Apple */
 }
+.imagemContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+.imagem {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.imagemDescricao {
+  margin-top: 10px;
+  font-style: italic;
+}
 
+.paragrafo strong {
+  font-weight: bold; /* Torna os títulos em negrito */
+}
 .cardPrincipal {
   background-color: #fff;
   padding: 30px;
@@ -14,6 +31,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   text-align: center;
+  overflow-wrap: break-word; 
 }
 
 .sobrenos {

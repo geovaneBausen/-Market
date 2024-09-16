@@ -1,9 +1,14 @@
-.iconeLoading{
-    
-        font-size: 2rem;
-        margin: 200px auto 0;
-        width: 100%;
-        color: aliceblue;
-      }
-      
-      
+.iconeLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;  /* O contêiner ocupa a tela inteira */
+  width: 100%;
+  
+}
+.iconeLoading svg {
+  font-size: 50px;  /* Define o tamanho do ícone */
+  width: 50px;      /* Ajusta a largura */
+  height: 50px;     /* Ajusta a altura */
+  color: #fff;      /* Define a cor do ícone para branco */
+}

@@ -4,12 +4,13 @@ import styles from "./header.module.css";
 import MenuNav from "../MenuNav/menuNav";
 
 const Header = () => {
-  // Estado para o menu
+  // Estado para controlar a visibilidade do menu
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className={styles.header}>
-      {/* Seção esquerda: Logo e nome da loja */}
+
+      {/* Seção esquerda com logo e nome da loja */}
       <div className={styles.leftSection}>
         <a href="/" className={styles.iconLink}>
           <img className={styles.logo} src="./imagens/logo.svg" alt="Logo" />
@@ -19,16 +20,14 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Botão do hambúrguer para telas menores */}
+      {/*Botão hambúrguer para abrir/fechar o menu em telas menores */}
       <button className={styles.hamburgerButton} onClick={() => setIsOpen(!isOpen)}>
         <Icon icon="mdi:menu" fontSize={30} />
       </button>
 
-      {/* Menu de navegação
-      A classe CSS aplicada ao elemento muda dependendo do estado da variável isOpen. O componente filho MenuNav recebe informações sobre o estado do menu e pode interagir com ele através das propriedades isOpen e setIsOpen.
-      */}
-
+      {/*Menu de navegação */}
       <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
+        {/* 5. Passando o estado e função para o componente MenuNav */}
         <MenuNav isOpen={isOpen} setIsOpen={setIsOpen} />
       </nav>
     </header>

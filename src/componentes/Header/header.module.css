@@ -11,13 +11,13 @@
   width: 100%;
   z-index: 10;
   border-bottom: 1px solid #ea0000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona leve sombra */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .leftSection {
   display: flex;
   align-items: center;
-  flex-grow: 1; /* Permite que a leftSection ocupe espaço disponível */
+  flex-grow: 1;
 }
 
 .logo {
@@ -43,57 +43,38 @@
   color: #000;
 }
 
-.menuContainer {
-  position: absolute;
-  top: 60px; /* Alinha o menu logo abaixo do header */
-  right: 0;
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 9;
-}
-
 @media (max-width: 768px) {
   .hamburgerIcon {
-    font-size: 24px; /* Ajuste do tamanho do ícone no mobile */
-  }
-
-  .menuContainer {
-    width: 100%; /* O menu ocupa toda a largura em dispositivos menores */
+    font-size: 24px; 
   }
 }
-
-
 
 /* Estilo para telas grandes */
 .header nav ul {
-  display: flex; /* Mostrar o menu horizontalmente */
+  display: flex; 
 }
 
 .hamburgerButton {
-  display: none; /* Esconde o ícone do hambúrguer */
+  display: none; 
 }
 
 @media (max-width: 768px) {
-  /* Esconde os links e mostra o menu hambúrguer em telas menores */
   .header nav ul {
-    display: none; /* Esconde os links no menu */
+    display: none; 
   }
 
   .hamburgerButton {
-    display: block; /* Exibe o ícone do hambúrguer */
+    display: block; 
   }
 
   nav ul.open {
-    display: flex; /* Exibe o menu quando aberto */
+    display: flex; 
     flex-direction: column;
     position: absolute;
-    top: 50px; /* Posiciona abaixo do header */
+    top: 50px; 
     right: 40px;
     width: 100%;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 }
-
-
