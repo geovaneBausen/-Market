@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Desenvolvimento de uma Aplicação Web com React  -  刀Market -  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Funcionalidade
 
-## Available Scripts
+A aplicação web desenvolvida tem como objetivo simular uma **loja virtual**, oferecendo uma interface interativa com funcionalidades de **busca de produtos através da API do Mercado Livre**, **visualização detalhada de itens**, **simulação de envio de um formulário** e **navegação intuitiva**. Todos esses recursos foram implementados utilizando a biblioteca React, garantindo que os usuários possam explorar os produtos de forma eficiente.
 
-In the project directory, you can run:
+### Como a API do Mercado Livre é Utilizada
 
-### `npm start`
+A aplicação utiliza a API do Mercado Livre para buscar e exibir produtos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Função `fetchProducts`**: Faz uma requisição à API do Mercado Livre para buscar produtos baseados no termo de pesquisa (query), converte a resposta em JSON e retorna a lista de produtos encontrada. Exemplo: `fetchProducts("celular")` retorna os resultados da busca por "celular" no Mercado Livre.
+- **Função `fetchItem`**: Faz uma requisição à API do Mercado Livre para obter informações detalhadas sobre um item específico, usando o `itemId` fornecido. Exemplo: `fetchItem("MLB123456")` retorna os detalhes do item com o ID "MLB123456" no Mercado Livre.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![imagem1](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/apiId.png)
+![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/apiQuery.png)
 
-### `npm test`
+## Páginas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Página Inicial**: Lista de produtos do Mercado Livre.
+- **Página de Cadastro**: Permite que usuários simulem um envio de formulário para criação de conta.
+- **Página Sobre**: Informações sobre o site e sua proposta.
+- **Página de Item**: Detalhes específicos de um produto.
+- **Página Não Encontrada**: Mensagem exibida quando a página solicitada não existe.
 
-### `npm run build`
+![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/rotas.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A aplicação foi estruturada com base em componentes reutilizáveis, organizados em pastas e conectados através do React Router.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Componentização
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O projeto foi estruturado utilizando componentes reutilizáveis, facilitando a manutenção e expansão da aplicação. A divisão em componentes permite que diferentes partes da aplicação sejam desenvolvidas e testadas de forma isolada, promovendo uma arquitetura mais modular e escalável.
 
-### `npm run eject`
+![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/componentes.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Estilização e Design
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A aplicação foi estilizada com CSS Modules, priorizando a responsividade e uma experiência visual moderna. A modularização do CSS garante o escopo local dos estilos, evitando conflitos de nomenclatura e promovendo um desenvolvimento mais organizado. Boas práticas de design foram aplicadas para garantir uma interface intuitiva e funcional em diferentes tamanhos de tela, desde desktops até dispositivos móveis.
+*Ipad Mini*
+![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/ipadMini.png)
+*Iphone pro max 14*
+![imagem2](https://github.com/geovaneBausen/-Market/blob/main/public/imagens/iphone14Promax.png)
+## Hooks e Efeitos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+O hook **`useState`** é amplamente utilizado para gerenciar o estado local em vários componentes, incluindo:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Busca**: Armazena o termo de busca digitado pelo usuário.
+- **Contador**: Mantém o valor do contador e atualiza-o a cada clique no botão.
+- **Formulário**: Gerencia os dados do formulário e a lista de usuários submetidos.
+- **Cabeçalho**: Controla a visibilidade do menu de navegação.
+- **Listagem de Itens**: Armazena itens recebidos da API, itens filtrados e controla o estado de carregamento.
 
-## Learn More
+O hook **`useEffect`** é utilizado para:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Formulário**: Exibir a tabela de usuários no console após cada atualização da lista de usuários.
+- **Listagem de Itens**: Buscar itens da API quando o componente é montado e atualizar os estados com os dados recebidos.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Isso garante que a interface se atualize conforme necessário e mantenha uma experiência de usuário interativa e eficiente.
 
-### Code Splitting
+## Publicação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+A aplicação foi publicada na plataforma Vercel, permitindo acessibilidade online para testes e demonstração das funcionalidades. O link para acesso ao projeto está disponível abaixo:
 
-### Analyzing the Bundle Size
+[Link para o projeto](https://seu-link-para-o-projeto.vercel.app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
