@@ -1,4 +1,4 @@
-import style from "./sobre.module.css";
+me import style from "./sobre.module.css";
 import { Icon } from "@iconify/react";
 import { Link } from 'react-router-dom';
 
@@ -117,7 +117,7 @@ function Sobre() {
               O projeto está no GitHub, com instruções para instalação e execução da aplicação.
             </p>
             <div className={style.linkContainer}>
-              <Link to="https://github.com/geovaneBausen" target="_blank" rel="noopener noreferrer">
+              <Link to="https://github.com/geovaneBausen/-Market" target="_blank" rel="noopener noreferrer">
                 <Icon icon="fe:github" className={style.githubIcon} />
               </Link>
             </div>
