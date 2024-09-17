@@ -1,4 +1,4 @@
-me import style from "./sobre.module.css";
+import style from "./sobre.module.css";
 import { Icon } from "@iconify/react";
 import { Link } from 'react-router-dom';
 
@@ -73,10 +73,9 @@ function Sobre() {
             </p>
             <div className={style.imagemContainer}>
               <img src="./imagens/iphone14ProMax.png" alt="Iphone 14 ProMax" className={style.imagem} />
-               <p className={style.imagemDescricao}>Iphone 14 ProMax</p>
+              <p className={style.imagemDescricao}>Ipad Mini</p>
               <img src="./imagens/ipadMini.png" alt="Ipad Mini" className={style.imagem} />
-               <p className={style.imagemDescricao}>Ipad Mini</p>
-              
+              <p className={style.imagemDescricao}>Iphone 14 ProMax</p>
             </div>
           </div>
 
