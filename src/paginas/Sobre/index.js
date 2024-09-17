@@ -72,10 +72,11 @@ function Sobre() {
               A aplicação foi estilizada com CSS Modules, priorizando a responsividade e uma experiência visual moderna. A modularização do CSS garante o escopo local dos estilos, evitando conflitos de nomenclatura e promovendo um desenvolvimento mais organizado. Boas práticas de design foram aplicadas para garantir uma interface intuitiva e funcional em diferentes tamanhos de tela, desde desktops até dispositivos móveis.
             </p>
             <div className={style.imagemContainer}>
+            <p className={style.imagemDescricao}>Iphone 14 ProMax</p>
               <img src="./imagens/iphone14ProMax.png" alt="Iphone 14 ProMax" className={style.imagem} />
               <p className={style.imagemDescricao}>Ipad Mini</p>
               <img src="./imagens/ipadMini.png" alt="Ipad Mini" className={style.imagem} />
-              <p className={style.imagemDescricao}>Iphone 14 ProMax</p>
+              
             </div>
           </div>
 
