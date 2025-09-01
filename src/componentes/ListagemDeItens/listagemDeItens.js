@@ -1,4 +1,4 @@
-//componente pai 
+//componente pai
 //Buscar itens da API, exibir uma barra de busca e renderizar a lista de itens usando o componente ItemCard.
 
 import React, { useState, useEffect } from 'react';
@@ -13,6 +13,7 @@ function ListagemDeItens() {
   const [items, setItems] = useState([]);// Estado para Armazenar a lista de itens recebidos da API.
   const [loading, setLoading] = useState(true);// Estado para controlar a exibição do componente de carregamento.
   const [filteredItems, setFilteredItems] = useState([]); // // Estado para itens filtrados pela busca
+  const [error, setError] = useState(null); // Estado para armazenar erros
 
   //useEffect é executado após o componente ser renderizado.
   //Faz uma requisição à API para buscar itens quando o componente é montado.
@@ -26,13 +27,17 @@ function ListagemDeItens() {
         setItems(response); // Atualiza o estado 'items' com os dados da API.
         setFilteredItems(response); // Inicializa itens filtrados com todos os items
         setLoading(false);   // Esconde o componente de carregamento.
+      })
+      .catch((error) => {
+        console.error("Erro ao buscar produtos:", error);
+        setError("Ocorreu um erro ao buscar os produtos. Tente novamente mais tarde.");
+        setLoading(false);
       });
   }, []);// O array vazio como segundo argumento garante que o efeito seja executado apenas uma vez, após a primeira renderização.
 
   // Função para lidar com os resultados da busca
   const handleSearchResults = (results) => {
     setFilteredItems(results); // Atualiza o estado com os resultados da busca
-
   };
 
   return (
@@ -41,7 +46,9 @@ function ListagemDeItens() {
       <h1 className={styles.h1}><Busca onSearch={handleSearchResults} /></h1>{/* Título e componente de busca. */}
         <div className={styles.carrousel}> {/* Container para os itens*/}
           {/* Renderiza o componente Loading enquanto os dados estiverem sendo buscados. */}
-          {loading ? ( <Loading />) : (
+          {loading && <Loading />}
+          {error && <p className={styles.error}>{error}</p>}
+          {!loading && !error && (
             // Renderiza a lista de itens após os dados serem carregados.
             <ul>
               {/* Percorre cada item da resposta da API e renderiza um componente ItemCard para cada um.*/}

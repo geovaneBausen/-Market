@@ -1,9 +1,12 @@
 //Busca produtos com base em uma consulta.
 const fetchProducts = async (query) => {
   const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
-  const data = await response.json();
 
+  if (!response.ok) {
+    throw new Error('Erro ao buscar produtos');
+  }
+
+  const data = await response.json();
   return data.results;
 };
 export default fetchProducts;
-
