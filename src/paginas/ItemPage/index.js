@@ -10,17 +10,22 @@ function ItemPage() {
   const { id } = useParams();
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const [error, setError] = useState(null);
 
   // Busca o item pela ID passada na URL
   useEffect(() => {
     const buscarItem = async () => {
       try {
         setLoading(true);
+        setError(null);
         const dadosItem = await fetchItem(id);
+        if (dadosItem.error) {
+          throw new Error(dadosItem.error);
+        }
         setItem(dadosItem);
       } catch (error) {
         console.error("Erro ao buscar item:", error);
+        setError("Não foi possível carregar as informações do item. Tente novamente mais tarde.");
       } finally {
         setLoading(false);
       }
@@ -32,10 +37,15 @@ function ItemPage() {
     return <Loading />;
   }
 
+  if (error) {
+    return <p className={style.error}>{error}</p>;
+  }
+
   if (!item) {
     return <p>Item não encontrado.</p>;
   }
 
+  // A desestruturação só acontece depois de todas as verificações
   const {
     title,
     thumbnail,
@@ -87,7 +97,7 @@ function ItemPage() {
           {genero && <p>Gênero: {genero.value_name}</p>}
           {idadeMinima && <p>Idade Mínima: {idadeMinima.value_name}</p>}
           {anoPublicacao && <p>Ano de Publicação: {anoPublicacao.value_name}</p>}
-          
+
 
           {/* atributos gerais */}
           {peso ? (
@@ -106,8 +116,8 @@ function ItemPage() {
           {material && <p>Material: {material.value_name}</p>}
           {garantia && <p>Garantia: {garantia.value_name}</p>}
           {duracaoGarantia && <p>Duração da Garantia: {duracaoGarantia.value_name}</p>}
-         
-        
+
+
 
           <div className={style.buttonContainer}>
             <a href={permalink} target="_blank" rel="noopener noreferrer" className={style.buyButton}>
