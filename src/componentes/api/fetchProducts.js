@@ -1,12 +1,19 @@
+import { mockProducts } from './mock';
+
 //Busca produtos com base em uma consulta.
 const fetchProducts = async (query) => {
-  const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
+  // Simula uma chamada de API
+  await new Promise(resolve => setTimeout(resolve, 500));
 
-  if (!response.ok) {
-    throw new Error('Erro ao buscar produtos');
+  if (!query) {
+    return mockProducts;
   }
 
-  const data = await response.json();
-  return data.results;
+  const lowercasedQuery = query.toLowerCase();
+  const results = mockProducts.filter(product =>
+    product.title.toLowerCase().includes(lowercasedQuery)
+  );
+
+  return results;
 };
 export default fetchProducts;

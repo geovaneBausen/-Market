@@ -1,13 +1,17 @@
+import { mockProducts } from './mock';
+
 // Função para buscar informações de um item específico
 export const fetchItem = async (itemId) => {
-  const response = await fetch(`https://api.mercadolibre.com/items/${itemId}`);
+  // Simula uma chamada de API
+  await new Promise(resolve => setTimeout(resolve, 500));
 
-  if (!response.ok) {
-    throw new Error('Erro ao buscar o item');
+  const product = mockProducts.find(item => item.id === itemId);
+
+  if (!product) {
+    throw new Error('Item não encontrado');
   }
 
-  const data = await response.json();
-  return data;
+  return product;
 };
 
 export default fetchItem;
